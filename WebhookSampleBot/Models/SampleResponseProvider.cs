@@ -31,11 +31,9 @@ namespace WebhookSampleBot.Models
         /// <returns>Activity containing response to triggers.</returns>
         public static Activity GetResponseActivity(Activity inputContainingTriggers)
         {
-            var sampleResponseActivity = new Activity
-            {
-                Text = "Here's your response: " + inputContainingTriggers.From.Name,
-                Attachments = SampleResponseProvider.GetAttachments(inputContainingTriggers.Text)
-            };
+            var sampleResponseActivity = Activity.CreateMessageActivity();
+            sampleResponseActivity.Text = "Here's your response: " + inputContainingTriggers.From.Name;
+            sampleResponseActivity.Attachments = SampleResponseProvider.GetAttachments(inputContainingTriggers.Text);            
 
             if (sampleResponseActivity.Attachments == null || !sampleResponseActivity.Attachments.Any())
             {
@@ -44,7 +42,7 @@ namespace WebhookSampleBot.Models
                 sampleResponseActivity.Text += "<br />" + reply;
             }
 
-            return sampleResponseActivity;
+            return (Activity)sampleResponseActivity;
         }
 
         /// <summary>

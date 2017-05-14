@@ -1,0 +1,9 @@
+﻿{
+  "frameworks": {
+    "net46":{
+      "dependencies": {
+        "Microsoft.Bot.Builder":  "3.8.0"
+      }
+    }
+  }
+}

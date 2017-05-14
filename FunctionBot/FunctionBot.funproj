@@ -1,0 +1,22 @@
+﻿<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">14.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  
+  <Import Project="$(VSToolsPath)\AzureFunctions\Microsoft.AzureFunctions.Props" Condition="'$(VSToolsPath)' != ''" />
+
+  <PropertyGroup>
+    <SchemaVersion>2.0</SchemaVersion>  
+    <ProjectGuid>c4d53eed-4cf6-4022-88cc-07c165016eb0</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>    
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FunctionBot</RootNamespace>
+    <AssemblyName>FunctionBot</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+  </PropertyGroup>
+   
+  <Import Project="$(VSToolsPath)\AzureFunctions\Microsoft.AzureFunctions.targets" Condition="'$(VSToolsPath)' != ''" />
+  
+</Project>
