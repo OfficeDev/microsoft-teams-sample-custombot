@@ -7,4 +7,4 @@
     <img src="http://armviz.io/visualizebutton.png"/>
 </a>
 
-This Azure function is the backend for a Microsoft Teams custom bot, template contains boilerplate code for setting up the custom bot backend. For more information see 
+This Azure function is the backend for a Microsoft Teams custom bot, template contains boilerplate code for setting up the custom bot backend. For more information see http://wp.sjkp.dk/microsoft-teams-custom-bots-with-azure-functions/
