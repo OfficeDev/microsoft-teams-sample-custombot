@@ -135,6 +135,7 @@
     <Content Include="packages.config" />
     <None Include="Properties\PublishProfiles\CustomBotSample - Web Deploy.pubxml" />
     <None Include="Properties\PublishProfiles\SampleWebhook - Web Deploy.pubxml" />
+    <None Include="Properties\PublishProfiles\test.pubxml" />
     <None Include="Properties\PublishProfiles\WebhookSample.pubxml" />
     <None Include="Properties\PublishProfiles\WebhookSampleBot20170202014932.pubxml" />
     <None Include="Web.Debug.config">
