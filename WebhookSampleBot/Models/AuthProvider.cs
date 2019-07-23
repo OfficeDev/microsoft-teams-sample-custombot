@@ -18,7 +18,8 @@ namespace WebhookSampleBot.Models
         private static readonly Dictionary<string, string> SigningKeyDictionary = new Dictionary<string, string>()
             {
                 {"contoso", "vqF0En+Z0ucuRTM/01o2GuhMH3hKKk/N2bOmlM31zaA=" },
-                {"fabrikam", "QgyNSToQjf4p6+YzDpjKks1/tXeJQ7FhVHqRwTnugVI=" }
+                {"fabrikam", "QgyNSToQjf4p6+YzDpjKks1/tXeJQ7FhVHqRwTnugVI=" },
+                {"delegate", "Q4pS+ONLihS4bk/n7tjS3+QH1ozkeeLZdHgG5mAXwdA=" }
             };
 
         /// <summary>
@@ -32,7 +33,9 @@ namespace WebhookSampleBot.Models
         {
             if (string.IsNullOrEmpty(claimedSenderId))
             {
-                return new AuthResponse(false, "Id not present on request.");
+                claimedSenderId = "delegate";
+
+                //return new AuthResponse(false, "Id not present on request.");
             }
 
             if (authenticationHeaderValue == null)
